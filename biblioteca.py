@@ -14,6 +14,10 @@ class Pessoa():
         else:
             print (f"{self.nome} foi comer {comida}")
             self.comendo=True
+    def PararComer(self):
+        if self.comendo==True:
+            print("Parar de Comer")
+            self.comendo=False
     def falar(self):
         print (f"{self.nome} foi conversar")
     def dormir(self):
