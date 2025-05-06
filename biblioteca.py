@@ -3,8 +3,17 @@ class Pessoa():
         self.nome=nome
         self.idade=idade
         self.peso=peso
+        self.comendo=False
+        self.falando=False
+        self.dormindo=False
     def comer(self,comida):
-        print(f"{self.nome} foi comer{comida}")
+        if self.comendo==True:
+            print (f"{self.nome}  já está comendo")
+        elif self.falando==True:
+            print(f"{self.nome} não pode comer pq está falando.")
+        else:
+            print (f"{self.nome} foi comer {comida}")
+            self.comendo=True
     def falar(self):
         print (f"{self.nome} foi conversar")
     def dormir(self):
